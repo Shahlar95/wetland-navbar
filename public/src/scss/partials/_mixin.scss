@@ -1,0 +1,18 @@
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($justify:null, $align:null,$f-wrap:null){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $f-wrap;
+}
+
+@mixin image(){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

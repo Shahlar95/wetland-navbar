@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+header .navbar .container .logo {
+  width: 150px;
+}
+header .navbar .container .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .navbar .container .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .navbar .container .btn .line {
+  background-color: #5d41c2;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 2.5px 0;
+  transition: 0.3s ease;
+}
+header .navbar .container .btn:hover .line:first-child {
+  width: 10px;
+}
+header .navbar .container .btn:hover .line:nth-child(2) {
+  width: 20px;
+}
+header .navbar .container .btn:hover .line:last-child {
+  width: 30px;
+}
+header .navbar .container .btn:hover .line {
+  transform: rotate(-30deg);
+}
+header .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+  overflow: scroll;
+  z-index: 1;
+}
+header .mobile-menu .container {
+  background-color: #fff;
+  width: 340px;
+  height: 100vh;
+  padding: 0 15px;
+  position: relative;
+}
+header .mobile-menu .container .icon {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  cursor: pointer;
+}
+header .mobile-menu .container .icon i {
+  font-size: 12px;
+  color: red;
+}
+header .mobile-menu .container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px 0;
+  width: 200px;
+  cursor: pointer;
+}
+header .mobile-menu .container .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .mobile-menu .container ul {
+  padding: 25px 25px;
+}
+header .mobile-menu .container ul li {
+  margin: 10px 0;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+header .mobile-menu .container ul li .link-header {
+  border: none;
+  padding: 0px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.726);
+}
+header .mobile-menu .container ul li a {
+  padding: 0 10px;
+  border-left: 1px solid rgba(0, 0, 0, 0.253);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.753);
+}
+header .mobile-menu .container ul li a .increase.show, header .mobile-menu .container ul li a .increase2.show, header .mobile-menu .container ul li a .increase3.show, header .mobile-menu .container ul li a .increase4.show {
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+}
+header .mobile-menu .container ul li a .increase, header .mobile-menu .container ul li a .increase2, header .mobile-menu .container ul li a .increase3, header .mobile-menu .container ul li a .increase4 {
+  transition: 0.5s ease;
+}
+header .mobile-menu .container ul li:hover {
+  color: #2f80ed;
+  cursor: pointer;
+}
+header .mobile-menu .container ul .submenu, header .mobile-menu .container ul .submenu2, header .mobile-menu .container ul .submenu3, header .mobile-menu .container ul .submenu4 {
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+header .mobile-menu .container ul .submenu.show, header .mobile-menu .container ul .submenu2.show, header .mobile-menu .container ul .submenu3.show, header .mobile-menu .container ul .submenu4.show {
+  max-height: 200px;
+}
+header .mobile-menu .container ul li:last-child {
+  border: none;
+}
+header .mobile-menu .container .sign-up {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+header .mobile-menu .container .sign-up .login {
+  padding: 10px 0;
+  margin: 5px 0;
+  border: none;
+  border: 2px solid #2f80ed;
+  border-radius: 5px;
+  color: #2f80ed;
+  font-weight: bold;
+  background-color: #fff;
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+header .mobile-menu .container .sign-up .login:hover {
+  color: #fff;
+}
+header .mobile-menu .container .sign-up .login::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: block;
+  width: 150%;
+  height: 150%;
+  left: -25%;
+  right: -20%;
+  top: -4%;
+  bottom: 0;
+  transition: 0.5s ease;
+  transform: skew(45deg) scaleX(0);
+  background-color: #2f80ed;
+}
+header .mobile-menu .container .sign-up .login:hover::after {
+  transform: skew(45deg) scaleX(1);
+}
+header .mobile-menu .container .sign-up .started {
+  padding: 10px 0;
+  border: none;
+  border: 2px solid #2f80ed;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #2f80ed;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+header .mobile-menu .container .sign-up .started:hover {
+  color: #2f80ed;
+}
+header .mobile-menu .container .sign-up .started::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: block;
+  width: 150%;
+  height: 150%;
+  left: -25%;
+  right: -20%;
+  top: -4%;
+  bottom: 0;
+  transition: 0.5s ease;
+  transform: skew(45deg) scaleX(0);
+  background-color: #fff;
+}
+header .mobile-menu .container .sign-up .started:hover::after {
+  transform: skew(45deg) scaleX(1);
+}
+header .mobile-menu.show {
+  transition: 0.3s ease;
+  transform: translateX(0%);
+}
+
+.products .container .cards div .inner {
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+.products .container .cards div .inner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
